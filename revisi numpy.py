@@ -43,6 +43,7 @@ harga_array=arr.array('i',[20000, 135000, 40000])
 harga_array.append(75000)
 print("Fix Harga(module array):",harga_array.tolist())
 
+
 # Array dengan NumPy
 import numpy as np
 nilai_tugas=np.array([80, 85, 90, 95, 99])
@@ -52,6 +53,7 @@ print("Operasi aritmatika(+10):", nilai_tugas+10)
 # pembuatan array numpy
 nilai=np.array([88, 90, 95, 100])
 print("Mau nilai:", nilai)
+
 
 # MATRIKS dengan numpy
 # membuat array berisi nol
