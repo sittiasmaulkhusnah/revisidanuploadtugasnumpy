@@ -17,6 +17,7 @@ print("Ganti nama barang:", list_belanja)
 # menampilkan list barang langsung
 print("fix belanjaan:", list_belanja)
 
+
 import array as arr
 # membuat array bertipe ineteger (harga barang belanja bulanan)
 # harga awal
