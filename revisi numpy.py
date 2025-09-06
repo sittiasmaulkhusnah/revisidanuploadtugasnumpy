@@ -185,3 +185,4 @@ variance = np.var(arr)
 
 print("Array:", arr)
 print("Varians:", variance)
+
