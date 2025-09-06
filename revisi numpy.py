@@ -89,8 +89,99 @@ print(tes)
 tes=np.array([[0,3],[0,9],[0,6]]).size
 print(tes)
 
-# akses dan manipulasi data
+# akses dan manipulasi data (Indexing&Slicing)
 a=np.array([30,90,60,91]);a[1:3]
 print(a)
 
+# Statistical Functions
+#1. numpy.amin() and numpy.amax()
+arr = np.array([3, 1, 4, 1, 5, 9, 2, 6, 5])
+min_value = np.amin(arr)
+print("Nilai Minimum:", min_value)
 
+max_value = np.amax(arr)
+print("Nilai Maksimum:", max_value)
+
+arr = np.array([3, 1, 4, 1, 5, 9, 2, 6, 5])
+max_value = np.amax(arr)
+print("Nilai Maksimum:", max_value)
+
+#2. menghitung rentang (range) dari array (numpy.ptp())
+range_value = np.ptp(arr)
+print("\nArray:", arr)
+print("Rentang:", range_value)
+
+#3. numpy.percentile()
+# membuat array NumPy 
+arr = np.array([4, 8, 3, 9, 6, 2, 1, 5, 9])
+
+# menghitung persentil ke-25 (Q1)
+q1 = np.percentile(arr, 25)
+
+# menghitung persentil ke-50 (median)
+median = np.percentile(arr, 50)
+
+# menghitung persentil ke-75 (Q3)
+q3 = np.percentile(arr, 75)
+
+# menampilkan hasil
+print("Q1 (Persentil ke-25):", q1)
+print("Median (Persentil ke-50):", median)
+print("Q3 (Persentil ke-75):", q3)
+
+#4. numpy.median()
+# membuat array numpy
+arr = np.array([4, 8, 3, 9, 6, 2, 1, 5, 9])
+
+# menggunakan numpy.median() untuk menghitung median
+median_value = np.median(arr)
+print("Array:", arr)
+print("Median:", median_value)
+
+#5. numpy.mean()
+arr = np.array([4, 8, 3, 9, 6, 2, 1, 5, 9])
+mean = np.mean(arr)
+print("Mean:", mean)
+
+#6. numpy.average()
+average = np.average(arr)
+average = np.average(arr)
+print("Average:", average)
+
+#7. standard deviation
+arr = np.array([4, 8, 3, 9, 6, 2, 1, 5, 9])
+
+# menghitung standar deviasi dari array arr
+std_deviation = np.std(arr)
+
+print("Standar Deviasi:", std_deviation)
+
+#7.1. Data berkelompok
+interval = np.array([20, 30, 40, 50, 60, 70])  # Batas interval
+frekuensi = np.array([5, 12, 18, 10, 7])       # Frekuensi
+
+# menghitung midpoint dari setiap interval
+midpoints = (interval[:-1] + interval[1:]) / 2
+
+# menghitung mean dari data berkelompok
+mean = np.sum(midpoints * frekuensi) / np.sum(frekuensi)
+
+# menghitung variansi dari data berkelompok
+varians = np.sum(((midpoints - mean) ** 2) * frekuensi) / np.sum(frekuensi)
+
+# menghitung standar deviasi dari data berkelompok
+std_deviation = np.sqrt(varians)
+
+print("Mean:", mean)
+print("Varians:", varians)
+print("Standard Deviation:", std_deviation)
+
+#8. variance
+# Membuat array NumPy
+arr = np.array([4, 8, 3, 9, 6, 2, 1, 5, 9])
+
+# Menghitung varians dari array arr
+variance = np.var(arr)
+
+print("Array:", arr)
+print("Varians:", variance)
